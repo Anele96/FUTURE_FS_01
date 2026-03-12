@@ -1,38 +1,140 @@
+/* Reset & Base */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-font-family: Arial;
-margin: 0;
-background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
+/* Header */
 header {
-background: #333;
-color: white;
-text-align: center;
-padding: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Navigation */
 nav {
-background: #555;
-padding: 10px;
-text-align: center;
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav a {
-color: white;
-margin: 10px;
-text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Sections */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
 section {
-padding: 20px;
-background: white;
-margin: 20px;
-border-radius: 5px;
+  background-color: #fff;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Skills List */
+.skills-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Projects */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  padding: 15px 10px;
+  border-left: 5px solid #ffcc00;
+  border-radius: 5px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: underline;
+}
+
+.project-card a:hover {
+  color: #ff9900;
+}
+
+/* Contact Links */
+section#contact a {
+  color: #333;
+  text-decoration: none;
+}
+
+section#contact a:hover {
+  color: #ff9900;
+}
+
+/* Footer */
 footer {
-text-align: center;
-background: #333;
-color: white;
-padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .skills-list {
+    flex-direction: column;
+  }
+  
+  .projects-container {
+    flex-direction: column;
+  }
 }
