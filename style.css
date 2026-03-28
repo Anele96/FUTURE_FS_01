@@ -1,140 +1,159 @@
-/* Reset & Base */
-body, h1, h2, h3, p, ul, li {
+/* RESET */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
 }
 
-/* Header */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
+/* BODY */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #081b29, #0f172a);
+  color: white;
 
-header h1 {
-  font-size: 2.5em;
-}
-
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
-/* Navigation */
-nav {
-  background-color: #555;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 10px 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+/* HOME */
+.home {
+  width: 85%;
+  max-width: 1100px;
 
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* Sections */
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
-section {
-  background-color: #fff;
-  padding: 25px 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-h2 {
-  margin-bottom: 15px;
-  color: #333;
-}
-
-/* Skills List */
-.skills-list {
-  list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.skills-list li {
-  background-color: #ffcc00;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
+/* CONTENT */
+.home-content {
+  max-width: 550px;
+  line-height: 1.6;
 }
 
-/* Projects */
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* NAME */
+.home-content h1 {
+  font-size: 56px;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
 }
 
-.project-card {
-  background-color: #f9f9f9;
-  padding: 15px 10px;
-  border-left: 5px solid #ffcc00;
-  border-radius: 5px;
-}
-
-.project-card a {
-  display: inline-block;
+/* ROLE */
+.role {
+  font-size: 28px;
+  color: #0ef;
   margin-top: 10px;
-  color: #333;
-  text-decoration: underline;
+  letter-spacing: 1px;
 }
 
-.project-card a:hover {
-  color: #ff9900;
+/* SMALL INTRO */
+.small-intro {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 16px;
 }
 
-/* Contact Links */
-section#contact a {
-  color: #333;
+/* MAIN TEXT */
+.main-text {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* DOT ANIMATION */
+.dots::after {
+  content: "";
+  animation: dots 1.5s steps(4) infinite;
+}
+
+@keyframes dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
+}
+
+/* BUTTONS */
+.btn-box {
+  margin-top: 20px;
+}
+
+.btn-box a {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-right: 10px;
+
+  background: #0ef;
+  color: #081b29;
+
+  border-radius: 25px;
   text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.3s;
 }
 
-section#contact a:hover {
-  color: #ff9900;
+.btn-box a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0,238,255,0.6);
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
+/* SOCIAL ICONS */
+.home-sci {
+  margin-top: 20px;
 }
 
-/* Responsive */
-@media(max-width: 600px) {
-  .skills-list {
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #0ef;
+  border-radius: 50%;
+
+  margin-right: 10px;
+
+  color: #0ef;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+}
+
+/* IMAGE */
+.home-img img {
+  width: 300px;
+  border-radius: 50%;
+
+  border: 4px solid #0ef;
+
+  box-shadow: 0 0 30px #0ef;
+
+  transition: 0.4s;
+}
+
+.home-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #0ef;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .home {
     flex-direction: column;
+    text-align: center;
   }
-  
-  .projects-container {
-    flex-direction: column;
+
+  .home-img img {
+    margin-top: 20px;
+    width: 200px;
   }
 }
